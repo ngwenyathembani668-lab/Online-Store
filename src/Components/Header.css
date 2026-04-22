@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #0B79BF;
+    height: 60px;
+    align-items: center;
+}
+
+.logo > h1 {
+    color: #fff;
+}
+
+.nav-links > a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.nav-links > a:hover {
+    background: #F4F4F4;
+    color: #000;
+    transition: 0.9s;
+}
+
+.sign-in, .cart {
+    padding: 8px 12px;
+    border: none;
+    margin-right: 8px;
+}

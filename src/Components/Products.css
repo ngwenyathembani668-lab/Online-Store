@@ -1,0 +1,36 @@
+.product-box {
+    width: 13rem;
+    border: 2px solid #F4F4F4;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 5px;
+}
+
+.product-img {
+    width: 100%;
+}
+
+.product-img img {
+    width: 100%;
+}
+
+.rating i {
+    color: orange;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    padding: 0 5%;
+}
