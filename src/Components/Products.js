@@ -1,15 +1,20 @@
 // import React from 'react'
 import './Products.css';
 import '../index.css';
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./Firebase-config";
+// import { CartProvider } from "cartState";
+import { CartContext } from "../Context/cartState";
+
 
 function Products() {
 
-      const [products, setProducts] = useState([]);
+  const { addToCart } = useContext(CartContext);
+  
+  const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchProducts = async () => {
       const querySnapshot = await getDocs(collection(db, "products"));
       const productData = querySnapshot.docs.map(doc => ({
@@ -22,22 +27,25 @@ function Products() {
     fetchProducts();
   }, [])
 
+  
+
     return (
-        <div>
+      <div>
 
-            <div className="product-box">
-                {products.map(product => (
-                <div key={product.id} className="product-img">
-                    <img src={product.Image} alt={product.Name} />
-                    <h3>{product.Name}</h3>
-                    <p>{product.Description}</p>
-                    <p>{product.category}</p>
-                    <span>${product.Price}</span>
-                </div>
-                ))}
+        <div className="product-box">
+          {products.map(product => (
+            <div key={product.id} className="product-img">
+              <img src={product.Image} alt={product.Name} />
+              <h3>{product.Name}</h3>
+              <p>{product.Description}</p>
+              <p>{product.category}</p>
+              <span>${product.Price}</span>
+              <button onClick={() => addToCart(product)}>Add to Cart</button>
             </div>
-
+            ))}
         </div>
+
+      </div>
     );
 }
 

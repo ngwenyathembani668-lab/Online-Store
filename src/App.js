@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Products from './Components/Products';
 import SignIn from './Components/SignIn';
+import Cart from './Components/Cart';
 
 // import { Routes } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/Products' element={<Products />} />
             <Route path='/SignIn' element={<SignIn />} />
+            <Route path='/yourCart' element={<Cart />} />
           
           </Routes>
 
