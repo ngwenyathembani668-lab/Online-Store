@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { CartContext } from "../Context/cartState";
+import './Cart.css'
 
 function Cart() {
   const { cart, removeFromCart, totalPrice } = useContext(CartContext);
 
   return (
-    <div>
+    <div className="cart-box">
       <h1>Your Cart</h1>
       {cart.length === 0 ? (
         <p>No items in cart</p>

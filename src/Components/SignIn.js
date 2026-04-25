@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
 
- const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
@@ -49,7 +49,7 @@ const SignIn = () => {
       <button onClick={loginWithGoogle}>Sign in with Google</button>
     </div>
   );
-  
+
 }
 
 export default SignIn;
