@@ -30,22 +30,31 @@ function Products() {
 
 
   return (
-    <div>
 
-      <div className="product-box">
-        {products.map(product => (
-          <div key={product.id} className="product-img">
-            <img src={product.Image} alt={product.Name} />
-            <h3>{product.Name}</h3>
-            <p>{product.Description}</p>
-            <p>{product.category}</p>
-            <span>${product.Price}</span>
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
+    <div className='product-container'>
+      {/* <div > */}
+
+        <div className="product-box">
+          <div>
+            {products.map(product => (
+              <div key={product.id} className="product-img">
+                <img src={product.Image} alt={product.Name} />
+                <h3>{product.Name}</h3>
+                <p className='product-description'>{product.Description}</p>
+                {/* <p className='product-category'>{product.category}</p> */}
+                <span>${product.Price}</span>
+                <div className='add-to-cart-div'>
+                  <button onClick={() => addToCart(product)}>Add to Cart</button>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
+        </div>
+
+      {/* </div> */}
     </div>
+
   );
 }
 
