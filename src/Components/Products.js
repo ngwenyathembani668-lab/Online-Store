@@ -1,11 +1,11 @@
 // import React from 'react'
-import './Products.css';
-import '../index.css';
 import React, { useContext, useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./Firebase-config";
 // import { CartProvider } from "cartState";
 import { CartContext } from "../Context/cartState";
+import './Products.css';
+import '../index.css';
 
 
 function Products() {
@@ -32,26 +32,21 @@ function Products() {
   return (
 
     <div className='product-container'>
-      {/* <div > */}
-
+      {/* <div className="product-box"> */}
         <div className="product-box">
-          <div>
-            {products.map(product => (
-              <div key={product.id} className="product-img">
-                <img src={product.Image} alt={product.Name} />
-                <h3>{product.Name}</h3>
-                <p className='product-description'>{product.Description}</p>
-                {/* <p className='product-category'>{product.category}</p> */}
-                <span>${product.Price}</span>
-                <div className='add-to-cart-div'>
-                  <button onClick={() => addToCart(product)}>Add to Cart</button>
-                </div>
+          {products.map(product => (
+            <div key={product.id} className="product-img">
+              <img src={product.Image} alt={product.Name} />
+              <h3>{product.Name}</h3>
+              <p className='product-description'>{product.Description}</p>
+              {/* <p className='product-category'>{product.category}</p> */}
+              <span>${product.Price}</span>
+              <div className='add-to-cart-div'>
+                <button onClick={() => addToCart(product)}>Add to Cart</button>
               </div>
-            ))}
-          </div>
-
+            </div>
+          ))}
         </div>
-
       {/* </div> */}
     </div>
 
