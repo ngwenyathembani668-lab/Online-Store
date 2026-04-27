@@ -1,3 +1,30 @@
-.cart-box {
+.cart-cont {
     margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-box {
+    background: #fff;
+    padding: 30px 120px;
+    border-radius: 18px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.remove {
+    padding: 8px 12px;
+    background: #007bff;
+    border: none;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.remove:hover {
+    background: 0056b3;
+    transition: 1.1s;
+    cursor: pointer;
+}
+
+.item-li {
+    margin-bottom: 20px;
 }

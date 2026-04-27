@@ -1,11 +1,50 @@
 .Sign-in-page {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sign-box {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 80px;
+    background: #FFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.sign-in-box {
+.sign-box > h2 {
+    margin-bottom: 30px;
+}
+
+.sign-box > input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 18px;
+}
+
+.sign-in-with-google {
+    padding: 12px;
+    background: #000;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sign-in-with-google > svg {
+    fill: #FFF;
+    width: 22px;
+    margin-right: 10px;
+}
+
+.sign-btn {
+    margin-bottom: 10px;
+    color: #FFF;
 }

@@ -3,7 +3,7 @@ nav {
     justify-content: space-around;
     background: #0B79BF;
     height: 60px;
-    width: 100%;
+    width: 100vw;
     align-items: center;
     position: fixed;
     top: 0;
@@ -109,4 +109,38 @@ nav {
 .Sign-in-button:hover svg, .cart-span {
     fill: #000;
     /* color: #000;  */
+}
+
+@media (max-width: 1276px) {
+    .search-bar > input {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .search-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 784px) {
+    .logo > h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .log-out {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 604px) {
+    .logo > h1 {
+        font-size: 0.9rem;
+    }
+
+    .nav-links > .link {
+        font-size: 0.8rem;
+    }
 }

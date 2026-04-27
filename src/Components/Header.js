@@ -45,8 +45,8 @@ function Header() {
                 </div>
 
                 <div className='nav-links'>
-                    <Link to='/'>Home</Link>
-                    <Link to='/Products'>
+                    <Link className="link" to='/'>Home</Link>
+                    <Link className="link" to='/Products'>
                         Products
                     </Link>
                 </div>
@@ -60,7 +60,7 @@ function Header() {
 
                 {user ? (
 
-                    <button onClick={logout}>
+                    <button className="Sign-in-button log-out" onClick={logout}>
                         Log Out <span>({user.email})</span>
                     </button>
 
