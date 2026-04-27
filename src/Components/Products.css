@@ -60,3 +60,36 @@
 .add-to-cart-div button:hover {
   background: #0056b3;
 }
+
+
+@media (max-width: 1058px) {
+  .product-box {
+    grid-template-columns: 13rem 13rem 13rem;
+  }
+}
+
+@media (max-width: 818px) {
+  .product-box {
+    grid-template-columns: 13rem 13rem;
+  }
+}
+
+@media (max-width: 546px) {
+  .product-box {
+    grid-template-columns: 18rem;
+  }
+
+  .product-img > img {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 406px) {
+  .product-box {
+    grid-template-columns: 13rem;
+  }
+
+  .product-img > img {
+    width: 13rem;
+  }
+}

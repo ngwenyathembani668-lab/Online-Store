@@ -5,6 +5,8 @@
 }
 
 .cart-box {
+    display: flex;
+    flex-direction: column;
     background: #fff;
     padding: 30px 120px;
     border-radius: 18px;
@@ -27,4 +29,17 @@
 
 .item-li {
     margin-bottom: 20px;
+}
+
+@media (max-width: 406px) {
+    .cart-box {
+        width: 13rem;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .cart-box > h1 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
 }

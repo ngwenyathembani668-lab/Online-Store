@@ -144,3 +144,34 @@ nav {
         font-size: 0.8rem;
     }
 }
+
+@media (max-width: 536px) {
+    .log-out {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 478px) {
+    .user-options {
+        gap: 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 370px) {
+    .Sign-in-button {
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .user-options {
+        gap: 10px;
+    }
+    
+    .Sign-in-button > svg {
+        width: 15px;
+    }
+}
